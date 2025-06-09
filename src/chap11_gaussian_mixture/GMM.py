@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt 
 
 # 生成混合高斯分布数据
-def generate_data(n_samples=1000):
+def generate_data(n_samples = 1000):
     np.random.seed(42)
     # 定义三个高斯分布的中心点
     mu_true = np.array([ 
@@ -54,7 +54,7 @@ def generate_data(n_samples=1000):
     return X[shuffle_idx], y_true[shuffle_idx]
 
 # 自定义logsumexp函数
-def logsumexp(log_p, axis=1, keepdims=False):
+def logsumexp(log_p, axis = 1, keepdims = False):
     """优化后的logsumexp实现，包含数值稳定性增强和特殊case处理
     
     计算log(sum(exp(log_p)))，通过减去最大值避免数值溢出
