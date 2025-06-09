@@ -70,10 +70,10 @@ register(
 )
 
 register(
-    id='MountainCar-v0',  # 山车任务：爬坡
-    entry_point='gym.envs.classic_control:MountainCarEnv',
-    max_episode_steps=200,
-    reward_threshold=-110.0,  # 负数表示尽量减少步数
+    id = 'MountainCar-v0',  # 山车任务：爬坡
+    entry_point = 'gym.envs.classic_control:MountainCarEnv',
+    max_episode_steps = 200,
+    reward_threshold = -110.0,  # 负数表示尽量减少步数
 )
 register(
     id='MountainCarContinuous-v0',    # 连续动作版本
