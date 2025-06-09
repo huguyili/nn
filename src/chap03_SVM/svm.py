@@ -75,35 +75,28 @@ class SVM:
 
 if __name__ == '__main__':
     # 数据加载部分
-
     # 获取当前脚本所在目录，确保路径正确
     base_dir = os.path.dirname(os.path.abspath(__file__))
     # 构建训练集和测试集的绝对路径，指向src/chap03_SVM/data目录
     train_file = os.path.join(base_dir, 'data', 'train_linear.txt')  # 训练集文件路径
     test_file = os.path.join(base_dir, 'data', 'test_linear.txt')    # 测试集文件路径
-
     # 加载训练数据
     data_train = load_data(train_file)
-
     # 加载测试数据
     data_test = load_data(test_file)
-
     # 使用训练集训练SVM模型
     svm = SVM()            # 初始化模型
     svm.train(data_train)  # 训练模型
-
     # 使用SVM模型预测标签
     # 从训练数据中提取前两列作为特征(x1, x2)
     x_train = data_train[:, :2]  # feature [x1, x2]
     t_train = data_train[:, 2]   # 训练集标签
     # 使用训练好的SVM模型对训练数据进行标签预测
     t_train_pred = svm.predict(x_train)     # 预测标签
-
     x_test = data_test[:, :2]    # 测试集特征
     t_test = data_test[:, 2]     # 测试集标签
     # 对测试数据进行预测，获取预测标签
     t_test_pred = svm.predict(x_test)
-
     # 评估结果，计算准确率
     acc_train = eval_acc(t_train, t_train_pred)
     acc_test = eval_acc(t_test, t_test_pred)
