@@ -36,7 +36,7 @@ def identity_basis(x):
 # 请分别在这里实现"多项式基函数"（Multinomial Basis Function）以及"高斯基函数"（Gaussian Basis Function）
 
 # 其中以及训练集的x的范围在0-25之间
-def multinomial_basis(x, feature_num=10):
+def multinomial_basis(x, feature_num = 10):
     """多项式基函数：将输入x映射为多项式特征
     feature_num: 多项式的最高次数
     返回 shape (N, feature_num)"""
@@ -51,7 +51,7 @@ def multinomial_basis(x, feature_num=10):
     # 生成 x, x^2, ..., x^(feature_num)
     ret = [x**i for i in range(1, feature_num + 1)]
     # 将生成的列表合并成 shape(N, feature_num) 的二维数组
-    ret = np.concatenate(ret, axis=1)
+    ret = np.concatenate(ret, axis = 1)
     # ==========
     return ret
 
@@ -80,7 +80,7 @@ def gaussian_basis(x, feature_num=10):
 # 计算出一个优化后的w，请分别使用最小二乘法以及梯度下降两种办法优化w
 
 
-def least_squares(phi, y, alpha=0.0, solver="pinv"):
+def least_squares(phi, y, alpha = 0.0, solver = "pinv"):
     """
     带正则化的最小二乘法优化，支持多种求解器
 
