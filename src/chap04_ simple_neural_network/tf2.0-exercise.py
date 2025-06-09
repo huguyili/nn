@@ -25,11 +25,11 @@ def softmax(x):
     
     # 计算每个元素的指数值，减去最大值以提高数值稳定性
     # keepdims=True 保证维度一致，便于后续广播
-    x_max = tf.reduce_max(x, axis=-1, keepdims=True)
+    x_max = tf.reduce_max(x, axis = -1, keepdims = True)
     exp_x = tf.exp(x - x_max)
     
     # 计算softmax值，分母加上一个很小的epsilon避免除零错误
-    sum_exp = tf.reduce_sum(exp_x, axis=-1, keepdims=True)
+    sum_exp = tf.reduce_sum(exp_x, axis = -1, keepdims = True)
     return exp_x / (sum_exp + 1e-10)
 
 # 测试 softmax 实现是否正确，使用随机数据对比 TensorFlow 的实现
