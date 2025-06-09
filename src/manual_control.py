@@ -164,7 +164,7 @@ def find_weather_presets():                                                     
     return [(getattr(carla.WeatherParameters, x), name(x)) for x in presets]
 
 
-def get_actor_display_name(actor, truncate=250):                                   # 提取 actor 的类型标识符，并将其格式化为更易读的名称（例如 vehicle.tesla.model3 -> Tesla Model3）
+def get_actor_display_name(actor, truncate = 250):                                   # 提取 actor 的类型标识符，并将其格式化为更易读的名称（例如 vehicle.tesla.model3 -> Tesla Model3）
     name = ' '.join(actor.type_id.replace('_', '.').title().split('.')[1:])        # 如果名称过长，则进行截断，并在末尾加上省略号（…）
     return (name[:truncate - 1] + u'\u2026') if len(name) > truncate else name
 
