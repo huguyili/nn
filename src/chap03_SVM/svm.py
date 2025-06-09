@@ -95,7 +95,7 @@ if __name__ == '__main__':
     # 使用SVM模型预测标签
     # 从训练数据中提取前两列作为特征(x1, x2)
     x_train = data_train[:, :2]  # feature [x1, x2]
-    t_train = data_train[:, 2]   # 训练集标签
+    t_train = data_train[:, 2]   #  训练集标签
     # 使用训练好的SVM模型对训练数据进行标签预测
     t_train_pred = svm.predict(x_train)     # 预测标签
 
