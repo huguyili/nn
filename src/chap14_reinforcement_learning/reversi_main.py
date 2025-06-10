@@ -83,7 +83,7 @@ for i_episode in range(max_epochs):
         # 检查游戏是否结束
         if done:
             # 打印游戏结束信息（总步数 = t+1，因为索引从0开始）
-            print(f"第 {i_episode+1} 局游戏在 {t+1} 步后结束")
+            print(f"第 {i_episode + 1} 局游戏在 {t + 1} 步后结束")
             
             # 计算黑棋得分（棋盘上黑棋的数量）
             black_score = len(np.where(env.state[0, :, :] == 1)[0])
