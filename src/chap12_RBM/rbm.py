@@ -51,7 +51,7 @@ class RBM:
         init_std = np.sqrt(2.0 / (self.n_observe + self.n_hidden))  # Xavier初始化标准差
 
         self.W = np.random.normal(
-            0, init_std, size=(self.n_observe, self.n_hidden)
+            0, init_std, size = (self.n_observe, self.n_hidden)
         )  # 初始化权重矩阵（可见层 -> 隐藏层）
 
         # 可选替代方案：使用更小的固定标准差进行初始化。
@@ -128,8 +128,8 @@ class RBM:
 
                 # 计算梯度      
                 dW = np.dot(v0.T, h0_sample) - np.dot(v1_sample.T, h1_prob)          # 计算权重矩阵的梯度
-                db_v = np.sum(v0 - v1_sample, axis=0)                                # 计算可见层偏置的梯度
-                db_h = np.sum(h0_sample - h1_prob, axis=0)                           # 计算隐藏层偏置的梯度
+                db_v = np.sum(v0 - v1_sample, axis = 0)                                # 计算可见层偏置的梯度
+                db_h = np.sum(h0_sample - h1_prob, axis = 0)                           # 计算隐藏层偏置的梯度
 
                 # 更新参数
                 self.W += learning_rate * dW / batch_size                            # 更新权重矩阵
