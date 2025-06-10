@@ -70,23 +70,23 @@ register(
 )
 # 山车任务：利用动量爬坡
 register(
-    id='MountainCar-v0',  # 山车任务：爬坡
-    entry_point='gym.envs.classic_control:MountainCarEnv',
-    max_episode_steps=200,
-    reward_threshold=-110.0,  # 负数表示尽量减少步数
+    id = 'MountainCar-v0',  # 山车任务：爬坡
+    entry_point = 'gym.envs.classic_control:MountainCarEnv',
+    max_episode_steps = 200,
+    reward_threshold = -110.0,  # 负数表示尽量减少步数
 )
 
 # 山车连续控制版本（精细油门控制）
 register(
-    id='MountainCarContinuous-v0',    # 连续动作版本
-    entry_point='gym.envs.classic_control:Continuous_MountainCarEnv',
-    max_episode_steps=999,
-    reward_threshold=90.0,
+    id = 'MountainCarContinuous-v0',    # 连续动作版本
+    entry_point = 'gym.envs.classic_control:Continuous_MountainCarEnv',
+    max_episode_steps = 999,
+    reward_threshold = 90.0,
 )
 
 register(
-    id='Pendulum-v0',   # 钟摆任务：摆到垂直位置
-    entry_point='gym.envs.classic_control:PendulumEnv',
+    id = 'Pendulum-v0',   # 钟摆任务：摆到垂直位置
+    entry_point = 'gym.envs.classic_control:PendulumEnv',
     max_episode_steps = 200,
 )
 
