@@ -171,7 +171,7 @@ if __name__ == '__main__':
    # 使用自适应优化器 Adam ，学习率为0.01
    # Adam 是一种自适应学习率的优化算法，结合了 Momentum 和 RMSProp 的优点
    # learning_rate=0.01 设置了初始学习率为 0.01
-   opt = tf.keras.optimizers.Adam(learning_rate=0.01)  # 或Nadam/RMSprop
+   opt = tf.keras.optimizers.Adam(learning_rate = 0.01)  # 或Nadam/RMSprop
 
    # 从数据集中解包出x1, x2坐标和标签y
    # data_set 是一个包含多个样本的列表，每个样本格式为 (x1, x2, y)
@@ -203,7 +203,7 @@ if __name__ == '__main__':
 
     # 创建图形
     f, ax = plt.subplots(figsize=(6, 4))  # 创建一个图形和坐标轴
-    f.suptitle('Logistic Regression Example', fontsize=15)  # 设置图形的标题
+    f.suptitle('Logistic Regression Example', fontsize = 15)  # 设置图形的标题
     plt.ylabel('Y') 
     plt.xlabel('X')  
     ax.set_xlim(0, 10)  
