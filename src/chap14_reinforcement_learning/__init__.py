@@ -78,22 +78,22 @@ register(
 
 # 山车连续控制版本（精细油门控制）
 register(
-    id='MountainCarContinuous-v0',    # 连续动作版本
-    entry_point='gym.envs.classic_control:Continuous_MountainCarEnv',
-    max_episode_steps=999,
-    reward_threshold=90.0,
+    id = 'MountainCarContinuous-v0',    # 连续动作版本
+    entry_point = 'gym.envs.classic_control:Continuous_MountainCarEnv',
+    max_episode_steps = 999,
+    reward_threshold = 90.0,
 )
 
 register(
-    id='Pendulum-v0',   # 钟摆任务：摆到垂直位置
-    entry_point='gym.envs.classic_control:PendulumEnv',
+    id = 'Pendulum-v0',   # 钟摆任务：摆到垂直位置
+    entry_point = 'gym.envs.classic_control:PendulumEnv',
     max_episode_steps = 200,
 )
 
 register(
-    id='Acrobot-v1',     # 双连杆机械臂任务
-    entry_point='gym.envs.classic_control:AcrobotEnv',
-    max_episode_steps=500,
+    id = 'Acrobot-v1',     # 双连杆机械臂任务
+    entry_point = 'gym.envs.classic_control:AcrobotEnv',
+    max_episode_steps = 500,
 )
 
 # Box2d物理引擎环境：用于复杂物理模拟任务
