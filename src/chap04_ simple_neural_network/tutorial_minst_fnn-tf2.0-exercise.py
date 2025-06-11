@@ -53,10 +53,10 @@ class MyModel:
         ####################
         # 初始化权重和偏置
         # 输入层784 -> 隐藏层128
-        self.W1 = tf.Variable(tf.random.normal([784, 128], stddev=0.1))
+        self.W1 = tf.Variable(tf.random.normal([784, 128], stddev = 0.1))
         self.b1 = tf.Variable(tf.zeros([128]))
         # 隐藏层128 -> 输出层10
-        self.W2 = tf.Variable(tf.random.normal([128, 10], stddev=0.1))
+        self.W2 = tf.Variable(tf.random.normal([128, 10], stddev = 0.1))
         self.b2 = tf.Variable(tf.zeros([10]))
 
     def __call__(self, x):
